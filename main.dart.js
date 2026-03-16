@@ -82847,21 +82847,22 @@ A.aiK.prototype={
 $1(a){return new A.nN(this.a,null)},
 $S:543}
 A.JI.prototype={
-N(a){var s,r,q,p,o=null,n=A.bu(a,o,t.w).w.a.a,m=n<768,l=m?20:50,k=A.oJ(B.Ey,B.k,o,m?36:28),j=A.axx("assets/logo.png",o,100,100),i=m?14:11
-i=A.cU("ECLORA SENSATIONS",o,o,o,A.d0(o,o,B.k,o,o,o,o,o,o,o,o,i,o,o,B.bq,o,o,!0,o,m?6:8,o,o,o,o,o,o),o,o)
-s=m?12:8
-r=t.D
-s=A.fM(A.c([j,B.NY,i,B.NX,A.cU("By FZ",o,o,o,A.d0(o,o,B.k,o,o,o,o,o,o,o,o,s,o,o,B.bq,o,o,!0,o,m?3:2,o,o,o,o,o,o),o,o)],r),B.a_,B.a2,B.ae)
-j=A.rO(o,A.oJ(B.Ew,B.k,o,m?30:24),B.ak,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,new A.a3G(a),o,o,o,o,o,o)
-i=A.cE(o,o,m?25:30)
-k=A.mK(A.c([k,s,A.mK(A.c([j,i,A.oJ(B.Ex,B.k,o,m?30:24)],r),B.a_,B.a2,B.ae,0)],r),B.bp,B.jZ,B.ae,0)
-j=m?380:400
-i=m?n*0.97:820
-i=A.LJ(0,A.axs(A.axx("assets/header.png",B.Ag,m?270:300,i),"main-perfume",!1),o,o,o,o,o,o)
-s=A.cU("Signature Fragrance.",o,o,o,A.d0(o,o,B.k,o,o,o,o,o,"Serif",o,o,m?36:42,o,o,B.jB,o,o,!0,o,o,o,o,o,o,o,o),B.eR,o)
-q=A.ay(153,B.k.C()>>>16&255,B.k.C()>>>8&255,B.k.C()&255)
-p=m?12:10
-return A.fN(A.fM(A.c([B.kF,new A.c7(new A.av(l,0,l,0),k,o),A.cE(A.pT(B.ls,A.c([i,A.LJ(o,A.fM(A.c([s,A.cU("ESSENCE OF TIMELESSNESS",o,o,o,A.d0(o,o,q,o,o,o,o,o,o,o,o,p,o,o,B.nl,o,o,!0,o,m?10:12,o,o,o,o,o,o),B.eR,o)],r),B.a_,B.a2,B.ae),o,o,o,o,10,o)],r),B.M,B.cD),j,1/0)],r),B.a_,B.a2,B.ae),B.v,B.l,o,o,o,o,1/0)}}
+N(a){var s,r,q,p,o=null,n=A.bu(a,o,t.w).w.a.a,m=n<768,l=m?20:50,k=A.oJ(B.Ey,B.k,o,m?40:28),j=m?110:100
+j=A.axx("assets/logo.png",o,j,m?110:100)
+s=m?16:11
+s=A.cU("ECLORA SENSATIONS",o,o,o,A.d0(o,o,B.k,o,o,o,o,o,o,o,o,s,o,o,B.bq,o,o,!0,o,m?6:8,o,o,o,o,o,o),o,o)
+r=m?14:8
+q=t.D
+r=A.fM(A.c([j,B.NY,s,B.NX,A.cU("By FZ",o,o,o,A.d0(o,o,B.k,o,o,o,o,o,o,o,o,r,o,o,B.bq,o,o,!0,o,m?3:2,o,o,o,o,o,o),o,o)],q),B.a_,B.a2,B.ae)
+j=A.rO(o,A.oJ(B.Ew,B.k,o,m?32:24),B.ak,!1,o,o,o,o,o,o,o,o,o,o,o,o,o,new A.a3G(a),o,o,o,o,o,o)
+s=A.cE(o,o,m?28:30)
+k=A.mK(A.c([k,r,A.mK(A.c([j,s,A.oJ(B.Ex,B.k,o,m?32:24)],q),B.a_,B.a2,B.ae,0)],q),B.bp,B.jZ,B.ae,0)
+j=m?n*0.98:820
+j=A.LJ(0,A.axs(A.axx("assets/header.png",B.Ag,m?280:300,j),"main-perfume",!1),o,o,o,o,o,o)
+s=A.cU("Signature Fragrance.",o,o,o,A.d0(o,o,B.k,o,o,o,o,o,"Serif",o,o,m?40:42,o,o,B.jB,o,o,!0,o,o,o,o,o,o,o,o),B.eR,o)
+r=A.ay(153,B.k.C()>>>16&255,B.k.C()>>>8&255,B.k.C()&255)
+p=m?14:10
+return A.fN(A.fM(A.c([B.kF,new A.c7(new A.av(l,0,l,0),k,o),A.cE(A.pT(B.ls,A.c([j,A.LJ(o,A.fM(A.c([s,A.cU("ESSENCE OF TIMELESSNESS",o,o,o,A.d0(o,o,r,o,o,o,o,o,o,o,o,p,o,o,B.nl,o,o,!0,o,12,o,o,o,o,o,o),B.eR,o)],q),B.a_,B.a2,B.ae),o,o,o,o,10,o)],q),B.M,B.cD),400,1/0)],q),B.a_,B.a2,B.ae),B.v,B.l,o,o,o,o,1/0)}}
 A.a3G.prototype={
 $0(){var s=A.ate(new A.a3F(),null,t.z)
 A.L7(this.a).nR(s)},
@@ -82873,11 +82874,11 @@ A.Il.prototype={
 N(a){var s=A.bu(a,null,t.w).w,r=$.c_,q=(r==null?$.c_=$.ex():r).eQ("[DEFAULT]")
 A.ci(q,$.e1(),!0)
 return A.axp(new A.ZK(this,s.a.a<768),A.yb(new A.dh(q)).eS("collections").UP("createdAt",!1).qq(),t.l7)},
-a2D(a,b,c,d){var s,r,q,p=null,o=A.AV(),n=d?160:300,m=d?12:25,l=new A.ZI(n,m,o),k=d?50:60,j=d?20:40,i=A.cU(c,p,p,p,A.d0(p,p,B.me,p,p,p,p,p,p,p,p,11,p,p,p,p,p,!0,p,1,p,p,p,p,p,p),p,p),h=t.D
-i=A.a1D(A.fM(A.c([i,B.NZ,A.cU(b,p,p,p,A.d0(p,p,p,p,p,p,p,p,"Serif",p,p,d?24:36,p,p,B.bq,p,p,!0,p,p,p,p,p,p,p,p),p,p)],h),B.bp,B.a2,B.ae))
-l=A.mK(A.c([i,A.mK(A.c([new A.Bq(B.Er,new A.ZF(l),p),A.cE(p,p,d?8:10),new A.Bq(B.Es,new A.ZG(l),p)],h),B.a_,B.a2,B.ae,0)],h),B.a_,B.jZ,B.ae,0)
-i=A.cE(p,d?25:40,p)
-s=d?250:500
+a2D(a,b,c,d){var s,r,q,p=null,o=A.AV(),n=d?180:300,m=d?14:25,l=new A.ZI(n,m,o),k=d?55:60,j=d?20:40,i=A.cU(c,p,p,p,A.d0(p,p,B.me,p,p,p,p,p,p,p,p,d?12:11,p,p,p,p,p,!0,p,1,p,p,p,p,p,p),p,p),h=t.D
+i=A.a1D(A.fM(A.c([i,B.NZ,A.cU(b,p,p,p,A.d0(p,p,p,p,p,p,p,p,"Serif",p,p,d?26:36,p,p,B.bq,p,p,!0,p,p,p,p,p,p,p,p),p,p)],h),B.bp,B.a2,B.ae))
+l=A.mK(A.c([i,A.mK(A.c([new A.Bq(B.Er,new A.ZF(l),p),A.cE(p,p,10),new A.Bq(B.Es,new A.ZG(l),p)],h),B.a_,B.a2,B.ae,0)],h),B.a_,B.jZ,B.ae,0)
+i=A.cE(p,d?30:40,p)
+s=d?280:500
 r=$.c_
 q=(r==null?$.c_=$.ex():r).eQ("[DEFAULT]")
 A.ci(q,$.e1(),!0)
@@ -82923,7 +82924,7 @@ if(b.a===B.e1)return B.lX
 s=b.b
 if(s==null||s.gm_().length===0)return B.BH
 r=s.gm_()
-s=q.b?10:40
+s=q.b?12:40
 return A.atb(q.a,new A.ZD(r,q.d),r.length,new A.av(s,0,s,0),B.Ae,B.aE,new A.ZE(q.c))},
 $S:170}
 A.ZE.prototype={
@@ -82954,9 +82955,8 @@ A.a4A.prototype={
 $2(a,b){return new A.oL(this.a[b],null)},
 $S:547}
 A.O3.prototype={
-N(a){var s=null,r=A.bu(a,s,t.w).w,q=A.c(["Long Lasting Fragrance","Premium Ingredients","Signature Scents","Luxury Packaging","Strong Projection","Smooth Dry Down","Balanced Fragrance Notes","Skin Friendly Formula","Crafted with Care","Elegant Bottle Design","Unique Fragrance Blends","High Quality Oils","Refined Aroma","Long Wear Performance","Modern Luxury Design"],t.s),p=B.b.aR(q,r.a.a<768?"    \u2022    ":"      \u2022      ")
-r=new A.b0(A.ay(13,B.l.C()>>>16&255,B.l.C()>>>8&255,B.l.C()&255),1,B.u,-1)
-return A.fN(A.k5(A.lD(new A.zb(p,s),s,s,B.ce,!0,A.d0(s,s,B.l,s,s,s,s,s,s,s,s,13,s,s,B.p,s,s,!0,s,1.2,s,s,s,s,s,s),s,s,B.aH),s,s),B.v,s,new A.en(B.k,s,new A.dp(r,B.q,r,B.q),s,s,s,B.bh),45,s,s,1/0)}}
+N(a){var s=null,r=A.bu(a,s,t.w).w.a.a<768,q=A.c(["Long Lasting Fragrance","Premium Ingredients","Signature Scents","Luxury Packaging","Strong Projection","Smooth Dry Down","Balanced Fragrance Notes","Skin Friendly Formula","Crafted with Care","Elegant Bottle Design","Unique Fragrance Blends","High Quality Oils","Refined Aroma","Long Wear Performance","Modern Luxury Design"],t.s),p=B.b.aR(q,r?"    \u2022    ":"      \u2022      "),o=r?55:45,n=new A.b0(A.ay(13,B.l.C()>>>16&255,B.l.C()>>>8&255,B.l.C()&255),1,B.u,-1)
+return A.fN(A.k5(A.lD(new A.zb(p,s),s,s,B.ce,!0,A.d0(s,s,B.l,s,s,s,s,s,s,s,s,r?18:13,s,s,B.p,s,s,!0,s,1.2,s,s,s,s,s,s),s,s,B.aH),s,s),B.v,s,new A.en(B.k,s,new A.dp(n,B.q,n,B.q),s,s,s,B.bh),o,s,s,1/0)}}
 A.LU.prototype={
 N(a){var s,r,q,p,o,n,m,l,k,j=this,i=null,h=A.bu(a,i,t.w).w.a.a<768,g=A.i1(h?12:24),f=A.c([new A.dq(0,B.cS,A.ay(10,B.l.C()>>>16&255,B.l.C()>>>8&255,B.l.C()&255),B.JO,20)],t.sq),e=h?8:12,d=A.i1(h?8:18)
 d=A.a1D(A.fN(A.awm(A.i1(h?8:18),A.axy(j.f,new A.aam(h),B.f1,i,i,new A.aan(),B.zm,i)),B.v,i,new A.en(B.iq,i,i,d,i,i,B.bh),i,i,i,1/0))
