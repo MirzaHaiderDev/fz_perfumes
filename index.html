@@ -1,38 +1,485 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
   <base href="/fz_perfumes/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="ECLORA SENSATIONS - Premium Perfume Collection by FZ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="fz_perfumes">
+  <meta name="apple-mobile-web-app-title" content="ECLORA SENSATIONS">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>fz_perfumes</title>
+  <title>ECLORA SENSATIONS - Premium Perfumes by FZ</title>
   <link rel="manifest" href="manifest.json">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background: #000;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* Loading Container */
+    #loading-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 1;
+      transition: opacity 0.6s ease-out;
+      pointer-events: auto;
+      overflow: hidden;
+    }
+
+    #loading-container.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Center Content */
+    .loading-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 90%;
+      max-width: 400px;
+    }
+
+    /* Brand Section */
+    .brand-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .logo {
+      background: radial-gradient(circle at 30% 30%, #ffffff, #cccccc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      color: #000;
+      animation: float 3s ease-in-out infinite;
+      box-shadow: 0 10px 40px rgba(255, 255, 255, 0.15);
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    .brand-name {
+      font-weight: bold;
+      color: #ffffff;
+      font-family: Georgia, serif;
+      animation: fadeInDown 0.8s ease-out;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .brand-tagline {
+      color: #999999;
+      text-transform: uppercase;
+      animation: fadeInUp 0.8s ease-out 0.2s both;
+      font-weight: 500;
+    }
+
+    /* Animated Loading Bars */
+    .loading-bar-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .loading-bar {
+      height: 100%;
+      background: linear-gradient(90deg, transparent, #ffffff, transparent);
+      animation: loadingAnimation 1.5s infinite;
+    }
+
+    @keyframes loadingAnimation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* Animated Dots */
+    .loading-dots {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #ffffff;
+      animation: dotBounce 1.4s infinite;
+    }
+
+    .dot:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .dot:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+
+    @keyframes dotBounce {
+      0%, 60%, 100% {
+        opacity: 0.3;
+        transform: translateY(0);
+      }
+      30% {
+        opacity: 1;
+        transform: translateY(-10px);
+      }
+    }
+
+    /* Scent Particles (Optional decorative) */
+    .particles {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+    }
+
+    .particle {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      animation: float-up 4s infinite;
+    }
+
+    @keyframes float-up {
+      0% {
+        opacity: 0;
+        transform: translateY(100vh) translateX(0);
+      }
+      10% {
+        opacity: 1;
+      }
+      90% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(-100vh) translateX(100px);
+      }
+    }
+
+    .particle:nth-child(1) { left: 10%; animation-delay: 0s; }
+    .particle:nth-child(2) { left: 20%; animation-delay: 1s; }
+    .particle:nth-child(3) { left: 30%; animation-delay: 2s; }
+    .particle:nth-child(4) { left: 40%; animation-delay: 3s; }
+    .particle:nth-child(5) { left: 50%; animation-delay: 0.5s; }
+    .particle:nth-child(6) { left: 60%; animation-delay: 1.5s; }
+    .particle:nth-child(7) { left: 70%; animation-delay: 2.5s; }
+    .particle:nth-child(8) { left: 80%; animation-delay: 3.5s; }
+    .particle:nth-child(9) { left: 90%; animation-delay: 1.2s; }
+
+    /* Fade in animations */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* ✅ MULTI-BREAKPOINT RESPONSIVE SYSTEM */
+
+    /* Extra Small: 320-374px (iPhone SE, old Android) */
+    @media (max-width: 374px) {
+      .loading-content {
+        width: 85%;
+        gap: 24px;
+      }
+
+      .brand-section {
+        margin-bottom: 28px;
+      }
+
+      .logo {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+        letter-spacing: 2px;
+      }
+
+      .brand-tagline {
+        font-size: 9px;
+        letter-spacing: 1px;
+      }
+
+      .loading-bar-container {
+        width: 120px;
+        height: 2px;
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+      }
+    }
+
+    /* Small: 375-424px (iPhone 12/13/14) */
+    @media (min-width: 375px) and (max-width: 424px) {
+      .loading-content {
+        width: 88%;
+        gap: 28px;
+      }
+
+      .brand-section {
+        margin-bottom: 32px;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+      }
+
+      .brand-name {
+        font-size: 16px;
+        letter-spacing: 3px;
+      }
+
+      .brand-tagline {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+
+      .loading-bar-container {
+        width: 140px;
+        height: 2px;
+      }
+
+      .dot {
+        width: 7px;
+        height: 7px;
+        gap: 8px;
+      }
+    }
+
+    /* Medium: 425-767px (Pixel 5, Galaxy S21, large Android) */
+    @media (min-width: 425px) and (max-width: 767px) {
+      .loading-content {
+        width: 92%;
+        max-width: 350px;
+        gap: 32px;
+      }
+
+      .brand-section {
+        margin-bottom: 36px;
+      }
+
+      .logo {
+        width: 70px;
+        height: 70px;
+        font-size: 32px;
+      }
+
+      .brand-name {
+        font-size: 18px;
+        letter-spacing: 4px;
+      }
+
+      .brand-tagline {
+        font-size: 10px;
+        letter-spacing: 2px;
+      }
+
+      .loading-bar-container {
+        width: 160px;
+        height: 2px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+      }
+    }
+
+    /* Desktop: 768px+ (Tablets and desktop) */
+    @media (min-width: 768px) {
+      .loading-content {
+        width: 95%;
+        max-width: 400px;
+        gap: 40px;
+      }
+
+      .brand-section {
+        margin-bottom: 40px;
+      }
+
+      .logo {
+        width: 80px;
+        height: 80px;
+        font-size: 40px;
+      }
+
+      .brand-name {
+        font-size: 24px;
+        letter-spacing: 8px;
+      }
+
+      .brand-tagline {
+        font-size: 12px;
+        letter-spacing: 2px;
+      }
+
+      .loading-bar-container {
+        width: 200px;
+        height: 3px;
+      }
+
+      .dot {
+        width: 8px;
+        height: 8px;
+      }
+    }
+  </style>
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+<!-- Loading Screen -->
+<div id="loading-container">
+  <!-- Decorative Particles -->
+  <div class="particles">
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+
+  <!-- Loading Content -->
+  <div class="loading-content">
+    <!-- Brand Section -->
+    <div class="brand-section">
+      <div class="logo-container">
+        <div class="logo">✨</div>
+      </div>
+      <h1 class="brand-name">ECLORA SENSATIONS</h1>
+      <p class="brand-tagline">By FZ</p>
+    </div>
+
+    <!-- Loading Bar -->
+    <div class="loading-bar-container">
+      <div class="loading-bar"></div>
+    </div>
+
+    <!-- Loading Dots -->
+    <div class="loading-dots">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Flutter Bootstrap -->
+<script src="flutter_bootstrap.js" async></script>
+
+<!-- Loading Screen Handler -->
+<script>
+  // Hide loading screen when Flutter is ready
+  window.addEventListener('flutter-first-frame', function() {
+    const loadingContainer = document.getElementById('loading-container');
+    if (loadingContainer) {
+      loadingContainer.classList.add('hidden');
+      // Remove from DOM after animation completes
+      setTimeout(() => {
+        loadingContainer.remove();
+      }, 600);
+    }
+  });
+
+  // Fallback: Hide loading screen after 10 seconds (in case Flutter takes very long)
+  setTimeout(() => {
+    const loadingContainer = document.getElementById('loading-container');
+    if (loadingContainer && !loadingContainer.classList.contains('hidden')) {
+      loadingContainer.classList.add('hidden');
+      setTimeout(() => {
+        loadingContainer.remove();
+      }, 600);
+    }
+  }, 10000);
+</script>
 </body>
 </html>
